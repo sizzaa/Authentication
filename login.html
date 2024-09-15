@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url("random2.jpg"); /* Background image */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .wrapper {
+      background: rgba(12, 157, 173, 0.6); /* Semi-transparent background */
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      color: #ffffff;
+      width: 400px;
+      max-width: 100%;
+      text-align: center;
+    }
+    
+    .wrapper h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    
+    .input-box {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    
+    .input-box input {
+      width: 100%;
+      padding: 15px;
+      background: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #333;
+      outline: none;
+    }
+    
+    .input-box i {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #333;
+      font-size: 18px;
+    }
+    
+    .btn {
+      background: #28a745; /* Green background */
+      border: none;
+      color: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    .btn:hover {
+      background: #218838; /* Darker green on hover */
+    }
+    
+    .register-link {
+      margin-top: 20px;
+    }
+    
+    .register-link a {
+      color: #17a2b8; /* Teal color */
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <form id="loginForm">
+      <h1>Login</h1>
+      <div class="input-box">
+        <input type="text" id="username" placeholder="Username" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <button type="submit" class="btn">Login</button>
+      <div class="register-link">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </div>
+    </form>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

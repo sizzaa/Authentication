@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+      background-image: url("random3.jpg"); /* Use a high-quality background image */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    .wrapper {
+      width: 360px;
+      background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 50px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .wrapper h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+    .input-box {
+      position: relative;
+      margin-bottom: 15px;
+    }
+    .input-box input {
+      width: 90%;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    .input-box i {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #888;
+    }
+    #captchaCanvas {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    #passwordFeedback {
+      margin: 10px 0;
+      font-size: 14px;
+      color: #e74c3c;
+    }
+    .btn {
+      width: 100%;
+      padding: 15px;
+      background: #27ae60;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #2ecc71;
+    }
+    .login-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .login-link a {
+      color: #27ae60;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .login-link a:hover {
+      text-decoration: underline;
+
+      
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <body>
+  <div class="wrapper">
+    <form id="registrationForm">
+      <h1>Register</h1>
+      <div class="input-box">
+        <input type="text" id="username" placeholder="Username" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" id="password" placeholder="Password" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <div id="passwordFeedback"></div>
+
+      <div class="input-box">
+        <input type="password" id="confirmPassword" placeholder="Enter Your Password Again" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="text" id="Fullname" placeholder="Fullname" required>
+        <i class='bx bxs-user'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="text" id="Email" placeholder="Email" required>
+        <i class='bx bxs-envelope'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="text" id="phone" placeholder="Phone number" required>
+        <i class='bx bxs-phone number'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="text" id="Address" placeholder="Address" required>
+        <i class='bx bxs-map'></i>
+      </div>
+
+
+
+      <div class="input-box">
+        <input type="text" id="captchaInput" placeholder="Enter Captcha" required>
+        <i class='bx bx-refresh' onclick="generateCaptcha()"></i>
+      </div>
+      <canvas id="captchaCanvas"></canvas>
+      <button type="submit" class="btn">Register</button>
+      <div class="login-link">
+        <p>Already have an account? <a href="login.html">Login</a></p> <!-- Corrected href attribute -->
+      </div>
+
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
